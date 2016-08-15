@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.web.clientproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/clientside-project/1">
+            <name>TMPL_-_One_Pager</name>
+        </data>
+        <libraries xmlns="http://www.netbeans.org/ns/cdnjs-libraries/1">
+            <library name="fancybox" version="2.1.5">
+                <file localPath="public_html/js/libs/fancybox/blank.gif" path="blank.gif"/>
+                <file localPath="public_html/js/libs/fancybox/fancybox_loading.gif" path="fancybox_loading.gif"/>
+                <file localPath="public_html/js/libs/fancybox/fancybox_loading@2x.gif" path="fancybox_loading@2x.gif"/>
+                <file localPath="public_html/js/libs/fancybox/fancybox_overlay.png" path="fancybox_overlay.png"/>
+                <file localPath="public_html/js/libs/fancybox/fancybox_sprite.png" path="fancybox_sprite.png"/>
+                <file localPath="public_html/js/libs/fancybox/fancybox_sprite@2x.png" path="fancybox_sprite@2x.png"/>
+                <file localPath="public_html/js/libs/fancybox/helpers/fancybox_buttons.png" path="helpers/fancybox_buttons.png"/>
+                <file localPath="public_html/js/libs/fancybox/helpers/jquery.fancybox-buttons.css" path="helpers/jquery.fancybox-buttons.css"/>
+                <file localPath="public_html/js/libs/fancybox/helpers/jquery.fancybox-buttons.js" path="helpers/jquery.fancybox-buttons.js"/>
+                <file localPath="public_html/js/libs/fancybox/helpers/jquery.fancybox-media.js" path="helpers/jquery.fancybox-media.js"/>
+                <file localPath="public_html/js/libs/fancybox/helpers/jquery.fancybox-thumbs.css" path="helpers/jquery.fancybox-thumbs.css"/>
+                <file localPath="public_html/js/libs/fancybox/helpers/jquery.fancybox-thumbs.js" path="helpers/jquery.fancybox-thumbs.js"/>
+                <file localPath="public_html/js/libs/fancybox/jquery.fancybox.css" path="jquery.fancybox.css"/>
+                <file localPath="public_html/js/libs/fancybox/jquery.fancybox.js" path="jquery.fancybox.js"/>
+                <file localPath="public_html/js/libs/fancybox/jquery.fancybox.min.css" path="jquery.fancybox.min.css"/>
+                <file localPath="public_html/js/libs/fancybox/jquery.fancybox.min.js" path="jquery.fancybox.min.js"/>
+                <file localPath="public_html/js/libs/fancybox/jquery.fancybox.pack.js" path="jquery.fancybox.pack.js"/>
+            </library>
+        </libraries>
+    </configuration>
+</project>
