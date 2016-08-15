@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Canada One Factory Outlets",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "ExtendedData": "\n\t\t\t\t",
+        "Point": {
+            "coordinates": "-79.1204502,43.0876455,0.0"
+        }
+    },
+    {
+        "name": "Outlet Collection at Niagara",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "ExtendedData": "\n\t\t\t\t",
+        "Point": {
+            "coordinates": "-79.17264,43.157685,0.0"
+        }
+    },
+    {
+        "name": "Fashion Outlets of Niagara Falls USA",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "ExtendedData": "\n\t\t\t\t",
+        "Point": {
+            "coordinates": "-78.97912889999998,43.09777899999999,0.0"
+        }
+    }
+]

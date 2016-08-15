@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Transit Stop ",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "ExtendedData": "\n\t\t\t\t",
+        "Point": {
+            "coordinates": "-79.0905386,43.0853841,0.0"
+        }
+    },
+    {
+        "name": "VIA/GO Train Station",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "ExtendedData": "\n\t\t\t\t",
+        "Point": {
+            "coordinates": "-79.06313,43.10874,0.0"
+        }
+    }
+]

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src='//www.google.com/recaptcha/api.js?onload=onloadCallback'></script>
+    </head>
+    <body>
+        <div>
+            <form method="post" id="registrationForm" action="https://beaches.itracmediav4.com/post?uuid=6e544b44-a4af-4eae-ac7f-21f639207bf8" onsubmit="MM_validateForm('email', '', 'RisEmail', 'emailconf', '', 'RisEmail', 'zip', '', 'RisPostal');return document.MM_returnValue;" style="margin-top: 271.5px;">
+                <h3 style="visibility: visible;"><span>Register</span> Now! As a registrant you’ll be first in line to receive email updates about Treetops.</h3>
+                <input type="hidden" name="slid" value="6700EAF45F07D38E4951555199FB8600">
+                <input type="hidden" name="cmd" value="subscribe">
+                <input type="hidden" name="goto" value="http://thetreetops.ca/index.php?option=com_k2&amp;view=item&amp;layout=item&amp;id=2&amp;Itemid=105">
+                <input type="hidden" name="format" value="html">
+                <input type="hidden" name="custom_utmCampaign" id="utmCampaign" value="">
+                <input type="hidden" name="custom_AdWordsVisitor" id="AdWordsVisitor" value="">
+                <fieldset id="contactInfo">
+                    <div id="contactInfoFirst">
+                        <label for="first">First Name</label>
+                        <input type="text" name="first" id="first">
+                    </div>
+                    <div id="contactInfoLast">
+                        <label for="last">Last Name</label>
+                        <input type="text" name="last" id="last">
+                    </div>
+                    <!--
+                    <div id="contactInfoTelephone">
+                            <label for="phone">Telephone #</label>
+                            <input type="text" name="phone" id="phone" />
+                    </div>
+                    -->
+                    <div id="contactInfoCell">
+                        <label for="custom_cellPhone">Cell Phone #</label>
+                        <input type="text" name="custom_cellPhone" id="custom_cellPhone">
+                    </div>
+                    <div id="contactInfoEmail">
+                        <label for="email">Email Address *</label>
+                        <input type="text" name="email" id="email" class="error">
+                    </div>
+                    <div id="contactInfoConfirmEmail">
+                        <label for="emailconf">Confirm Email Address *</label>
+                        <input type="text" name="emailconf" id="emailconf" class="none">
+                    </div>
+                    <div id="contactInfoPostal">
+                        <label for="zip">Postal Code *</label>
+                        <input type="text" name="zip" id="zip" class="error">
+                    </div>
+
+                    <div style="clear:both;"></div>
+                </fieldset>
+                <fieldset id="customerProfile">
+                    <div id="customerProfileLeadSource">
+                        <label for="custom_howDidYouHear" class="sectionHeader" id="custom_howDidYouHearLabel">How did you first hear about us?</label>
+                        <select name="custom_howDidYouHear" id="custom_howDidYouHear">
+                            <option selected="selected" value="-1">Please specify</option>
+                            <option value="Sign">Signs</option>
+                            <option value="Internet">Internet</option>
+                            <option value="Brookfield website">Brookfield website</option>
+                            <option value="Orchard Ridge websit">Sorbara website</option>
+                            <option value="New Home Guide – GTA">New Home Guide – GTA</option>
+                            <option value="Radio">Radio</option>
+                            <option value="Toronto Sun">Toronto Sun</option>
+                            <option value="Toronto Star">Toronto Star</option>
+                            <option value="Community Paper">Community Paper</option>
+                            <option value="Real Estate Agent">Real Estate Agent</option>
+                            <option value="Direct Mailer">Direct Mailer</option>
+                            <option value="Today's Homes and Condominiums">Today's Homes and Condominiums</option>
+                            <option value="Referral">Referral</option>
+                            <option value="HOMES Magazine">HOMES Magazine</option>
+                            <option value="Nottawasaga Resort">Nottawasaga Resort</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div id="customerProfileHomeSize">
+                        <label for="custom_homeSize" class="sectionHeader" id="custom_homeSizeLabel">What is your desired home type?</label>
+                        <select name="custom_homeSize" id="custom_homeSize">
+                            <option selected="selected" value="-1">Please specify</option>
+                            <option value="townhome">Townhome</option>
+                            <option value="detached">Detached</option>
+                            <option value="bungalow">Bungalow</option>
+                        </select>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <!--
+                    <div id="customerProfileHomeSize">
+                            <label for="custom_homeSize" class="sectionHeader" id="custom_homeSizeLabel">What is your desired square footage?</label>
+                            <select name="custom_homeSize" id="custom_homeSize">
+                                    <option selected="selected" value="-1">Please specify</option>
+                                    <option value="1000-1499sq.ft.">1000-1499sq.ft.</option>
+                                    <option value="1500-1999sq.ft.">1500-1999sq.ft.</option>
+                                    <option value="2000-2499sq.ft.">2000-2499sq.ft.</option>
+                                    <option value="2500-2999sq.ft.">2500-2999sq.ft.</option>
+                                    <option value="3000-3499sq.ft.">3000-3499sq.ft.</option>
+                                    <option value="3500sq.ft.+">3500sq.ft.+</option>
+                            </select>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div id="customerProfileBedrooms">
+                            <label class="sectionHeader" id="custom_numOfBedroomsLabel" style="display:block;">What is your desired number of bedrooms?</label>
+                            <input name="custom_numOfBedrooms" type="radio" id="custom_numOfBedrooms1" value="1" />
+                            <label for="custom_numOfBedrooms1">1</label>
+                            <input name="custom_numOfBedrooms" type="radio" id="custom_numOfBedrooms2" value="2" />
+                            <label for="custom_numOfBedrooms2">2</label>
+                            <input name="custom_numOfBedrooms" type="radio" id="custom_numOfBedrooms3" value="3" />
+                            <label for="custom_numOfBedrooms3">3</label>
+                            <input name="custom_numOfBedrooms" type="radio" id="custom_numOfBedrooms4" value="4+" />
+                            <label for="custom_numOfBedrooms4">4+</label>
+                    </div>
+                    -->
+                    <div id="customerProfilePriceRange">
+                        <label class="sectionHeader" id="custom_priceRangeLabel">What is your budget?</label>
+                        <span><input type="radio" name="custom_priceRange" id="custom_priceRange2" value="$350,000-$399,999">
+                            <label for="custom_priceRange2">$350,000-$399,999</label></span>
+                        <span><input type="radio" name="custom_priceRange" id="custom_priceRange3" value="$400,000-$449,999">
+                            <label for="custom_priceRange3">$400,000-$449,999</label></span>
+                        <span><input type="radio" name="custom_priceRange" id="custom_priceRange4" value="$450,000-$499,999">
+                            <label for="custom_priceRange4">$450,000-$499,999</label></span>
+                        <span><input type="radio" name="custom_priceRange" id="custom_priceRange5" value="$500,000-$549,999">
+                            <label for="custom_priceRange5">$500,000-$549,999</label></span>
+                        <span><input type="radio" name="custom_priceRange" id="custom_priceRange6" value="$550,000-$599,999">
+                            <label for="custom_priceRange6">$550,000-$599,999</label></span>
+                        <span><input type="radio" name="custom_priceRange" id="custom_priceRange7" value="$600,000+">
+                            <label for="custom_priceRange7">$600,000+</label></span>
+                    </div>
+                </fieldset>
+                <p>* Required fields&nbsp;<span id="errorIndicator">- please fill in all required fields.</span></p>
+                <fieldset id="additionalComments">
+                    <div>
+                        <label for="custom_Comments" class="sectionHeader">Additional comments</label>
+
+                        <input type="text" name="custom_Comments" id="custom_Comments">
+                    </div>
+                </fieldset>
+                <!--<input type="checkbox" name="custom_optin" id="custom_optin"  />-->
+                <label for="custom_optin">I would like to receive email updates from Treetops, Brookfield Residential, Sorbara Group of Companies and/agents about our events and current and upcoming projects. *</label><input type="radio" name="custom_optin" id="custom_optin" value="yes">yes
+                <input type="radio" name="custom_optin" id="custom_optin_no" value="no">no
+                <div id="formSubmit">
+                    <label for="Register" style="float:left;"> Treetops&nbsp;&nbsp;&nbsp;&nbsp;5051, Side Road 10, Alliston,&nbsp;&nbsp;ON&nbsp;&nbsp;L9R 0K4 &nbsp;&nbsp;&nbsp;&nbsp;705-435-3577&nbsp;&nbsp;&nbsp;&nbsp;<span id="cloak41970"><a href="mailto:ourhome@thetreetops.ca">ourhome@thetreetops.ca</a></span><script type="text/javascript">
+                        //<!--
+                        document.getElementById('cloak41970').innerHTML = '';
+                        var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+                        var path = 'hr' + 'ef' + '=';
+                        var addy41970 = '&#111;&#117;rh&#111;m&#101;' + '&#64;';
+                        addy41970 = addy41970 + 'th&#101;tr&#101;&#101;t&#111;ps' + '&#46;' + 'c&#97;';
+                        document.getElementById('cloak41970').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy41970 + '\'>' + addy41970 + '<\/a>';
+                        //-->
+                        </script></label>
+                    <div class="g-recaptcha" data-sitekey="6LepEBUTAAAAAB5RBhIKhCrfokZQ69X9PWC2XYZM"></div>
+                    <div id="registerButton" style="display:none">
+                        <input type="submit" value="Register" id="Register">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript">
+            var onloadCallback = function () {
+                alert("grecaptcha is ready!");
+            };
+        </script>
+    </body>
+</html>

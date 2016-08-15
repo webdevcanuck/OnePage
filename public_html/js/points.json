@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Cora Breakfast and Lunch",
+        "styleUrl": "#icon-ci-1-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.06624299999999,43.842118,0"
+        }
+    },
+    {
+        "name": "Canadian Tire",
+        "styleUrl": "#icon-ci-2-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.07086099999998,43.842695,0"
+        }
+    },
+    {
+        "name": "Kitchen Stuff Plus",
+        "styleUrl": "#icon-ci-3-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.06989699999997,43.841445,0"
+        }
+    },
+    {
+        "name": "Walmart",
+        "styleUrl": "#icon-ci-4-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.06800299999998,43.844146,0"
+        }
+    },
+    {
+        "name": "Sobeys",
+        "styleUrl": "#icon-ci-5-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.07260500000001,43.846757,0"
+        }
+    },
+    {
+        "name": "Toys R Us Pickering",
+        "styleUrl": "#icon-ci-6-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.07005600000002,43.847932,0"
+        }
+    },
+    {
+        "name": "Pickering Town Centre",
+        "styleUrl": "#icon-ci-7-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.08867499999997,43.837035,0"
+        }
+    },
+    {
+        "name": "Loblaws",
+        "styleUrl": "#icon-ci-8-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.09168999999997,43.833187,0"
+        }
+    },
+    {
+        "name": "Starbucks",
+        "styleUrl": "#icon-ci-9-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.03782799999999,43.858957,0"
+        }
+    },
+    {
+        "name": "Mexx",
+        "styleUrl": "#icon-ci-10-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.02705700000001,43.861013,0"
+        }
+    },
+    {
+        "name": "Old Navy (Harwood Center)",
+        "styleUrl": "#icon-ci-11-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.02797900000002,43.861843,0"
+        }
+    },
+    {
+        "name": "Chapters - Durham Centre",
+        "styleUrl": "#icon-ci-12-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.02061700000002,43.863156,0"
+        }
+    },
+    {
+        "name": "Walmart",
+        "styleUrl": "#icon-ci-13-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.01349500000003,43.867384,0"
+        }
+    },
+    {
+        "name": "HomeSense",
+        "styleUrl": "#icon-ci-14-nodesc",
+        "ExtendedData": "\n\t\t\t",
+        "Point": {
+            "coordinates": "-79.02603999999997,43.864281,0"
+        }
+    }
+]
