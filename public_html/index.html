@@ -128,7 +128,7 @@
 
       </style>
    </head>
-   <body ng-controller="PhoneListCtrl">
+   <body>
       <!--[if lt IE 8]>
           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
@@ -287,33 +287,11 @@
                </div>
             </div>               
          </div>
-         <div class='row' id="gallery">
-            <div class="col-md-3" ng-repeat="photo in photos">
-               <img class="lightbox" src="img/{{photo.name}}" data-img="img/{{photo.name}}" rel="gall" title="{{photo.model}}" ng-repeat-end-watch />
-               <p>{{photo.model}}</p>
-            </div>
-            <div class="col-md-12">
-               <img class="lightbox" src="img/gal1.jpg" data-img="img/gal1.jpg" title="This Is a Test"/>
-            </div>
-         </div>
       </div>
 
       <footer>
          <p>&copy; Company 2015</p>
-      </footer>
-
-      <div id="lightbox" style="display:none; position:absolute; top:0; left:0; width:100%; z-index:9999999;">               
-         <div id="slider-img" class="text-center" style="position:fixed; left:20px; top:0px; z-index:9999999; opacity:0">                
-            <button type="button" class="close" data-dismiss="modal"><span class="close-button">CLOSE</span></button>
-            <img class="lightboxSlidenav slide-navarrow-l" src="img/nav-arrow-l.png" data-nav="l" style='position:absolute; left:-10px; top:50%; height:40px; margin-top:-20px; padding-right:10px'/>              
-            <div id="slide-container">
-               <img class="slider-img-holder" src="" style="max-width:100%"/>            
-            </div>
-            <img class="lightboxSlidenav slide-navarrow-r" src="img/nav-arrow-r.png" data-nav="r" style='position:absolute; right:-10px; top:50%; height:40px; margin-top:-20px; padding-left:10px'/>        
-            <div id="slide-caption" style="height:100px; background:#9EAD35; color:#FFF; padding:5px; width:100%; height:30px; line-height:30px; padding:0 10px; font-size:14px; position:absolute; bottom:-30px; left:0"></div>
-         </div>    
-         <div id="lightboxfade" style="width:1920px; height:1080px; position:fixed; top:0; left:0; background: rgba(0,0,0,.75); z-index:999999"></div>
-      </div>
+      </footer>     
 
       <div id="is-xs" class="visible-xs"></div>
       <div id="is-sm" class="visible-sm"></div>
@@ -321,170 +299,46 @@
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-      <script src="js/vendor/angular.min.js" type="text/javascript"></script>
-      <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
-      <script src="js/vendor/angularfire.min.js" type="text/javascript"></script>
       <script src="js/libs/fancybox/jquery.fancybox.js" type="text/javascript"></script>
-      <script src="js/libs/jssor/jssor.js" type="text/javascript"></script>
-      <script src="js/libs/jssor/jssor.slider.js" type="text/javascript"></script>
       <script src="js/bower_components/knockout/dist/knockout.js" type="text/javascript"></script>
+      <script src="js/bower_components/slick-carousel/slick/slick.min.js" type="text/javascript"></script>
       <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&hl=en"></script> 
       <script src="js/map_1.js" type="text/javascript"></script>        
       <script src="js/main.js"></script>
       <script src="js/vendor/app.js" type="text/javascript"></script>
       <script>
 
-                  $(document).ready(function () {
+         $(document).ready(function () {
 
-                      $(window).load(function () {
-                          function animITR() {
-                              elems = ["#block3", "#block5", "#block6"];
-                              times = [4000, 2000, 3000];
-                              for (var a = 0; a < elems.length; a++) {
-                                  $(elems[a]).css("left", ($(elems[a]).offset().left + $(elems[a]).width()) * -1 + "px");
-                                  $(elems[a]).animate({
-                                      left: 0
-                                  }, {
-                                      duration: times[a], easing: "swing"
-                                  });
-                              }
-                          }
-                          animITR();
-
-                          function animITL() {
-                              elems = ["#block1", "#block2", "#block4"];
-                              times = [4000, 2000, 3000];
-                              for (var a = 0; a < elems.length; a++) {
-                                  $(elems[a]).css("left", ($(elems[a]).offset().left + $(elems[a]).width()) + "px");
-                                  $(elems[a]).animate({
-                                      left: 0
-                                  }, {
-                                      duration: times[a], easing: "swing"
-                                  });
-                              }
-                          }
-                          animITL();
-                      });
-
-                      lightBoxFull = true;
-
-                      function lightboxResize() {
-                          if (lightBoxFull) {
-                              $("#lightboxfade").css({"width": $(window).width() + "px", "height": $(window).height() + "px"});
-                          }
-                      }
-
-                      $(window).resize(function () {
-                          lightboxResize();
-                          centreLightbox();
-                      });
-                      lightboxResize();
-
-                      function setImage(thsIMG, thsTitle) {
-                          $("#slide-container img").remove();
-                          var theImage = new Image();
-                          theImage.src = thsIMG;
-                          $("#slide-container").html('<img class="slider-img-holder" src="' + thsIMG + '">');
-                          $("#slide-caption").html(thsTitle);
-                          theImage.onload = function () {
-                              lightboxswitch(theImage.height, theImage.width, thsTitle);
-                          };
-                      }
-
-                      function centreLightbox() {
-                          lbW = ($("#slider-img").width() / 2) * -1;
-                          lbH = $("#slider-img").height();
-                          $("#slider-img").css({"left": "50%", "margin-left": lbW});
-                      }
-
-                      var scrollLightbox = true;
-                      function lightboxswitch(inH, inW, inTitle) {
-                          $("#lightbox #slider-img").css("opacity", "0"); // SET OPACITY OF FULL SLIDE IN LIGHTBOX TO 0
-
-                          var arrowLW = $("#lightbox .slide-navarrow-l").width(); // ARROW LEFT WIDTH
-                          var arrowRW = $("#lightbox .slide-navarrow-r").width(); // ARROW RIGHT WIDTH
-                          var setTop = parseInt(540 - (inH / 2));
-                          var slideCaptionH = parseInt($("#slide-caption").height() / 2);
-                          //
-
-                          winW = $(window).width();
-                          winH = $(window).height();
-                          imgL = (winW / 2) - (inW / 2) - arrowLW;
-                          imgT = (winH / 2) - (inH / 2);
-                          //
-
-                          var fullSlideW = parseInt(960 - ((arrowLW + arrowRW + inW) / 2));
-                          var slideW = parseInt(arrowLW + arrowRW + inW);
-                          $("#slider-img").css({"left": "50%", "top": imgT + "px", "margin-left": ((inW / 2) * -1)});
-                          $("#slide-caption").css({"width": inW + "px"});
-
-                          $("#lightbox #slider-img").stop().animate({
-                              opacity: 1
-                          }, 500, function () {
-                              scrollLightbox = true;
-                          });
-                      }
-
-                      $(document).on("click", ".lightbox", function (event) {
-                          var target = $(event.target);
-                          var ths = $(event.target).attr('data-img');
-                          var rel = $(event.target).attr('rel');
-                          $("#slide-caption").html($(this).attr("title"));
-
-                          $("#lightbox").fadeIn(250, function () {
-                              setImage(ths);
-                          });
-
-                          $(".lightboxSlidenav").hide();
-                          if (rel) {
-                              window.getIn = $("*[rel=" + rel + "]").index(target);
-                              window.getLen = $("*[rel=" + rel + "]").length;
-                              window.getRef = rel;
-                              $(".lightboxSlidenav").show();
-                          }
-                      });
-
-                      $(document).on("click", ".lightboxSlidenav", function (event) {
-                          if (getIn >= 0 && scrollLightbox === true) {
-                              var point = $(this).attr("data-nav");
-                              var eq;
-                              scrollLightbox = false;
-                              if (point === "r") {
-                                  getLen = ($("*[rel=" + getRef + "]").length - 1);
-                                  if (getIn === getLen) {
-                                      getIn = eq = 0;
-                                  } else {
-                                      getIn++;
-                                      eq = getIn;
-                                  }
-                              } else if (point === "l") {
-                                  getLen = ($("*[rel=" + getRef + "]").length - 1);
-                                  if (getIn === 0) {
-                                      getIn = eq = getLen;
-                                  } else {
-                                      getIn--;
-                                      eq = getIn;
-                                  }
-                              }
-
-                              var getImg = $("*[rel=" + getRef + "]:eq(" + eq + ")").attr("data-img");
-                              var getReff = $("*[rel=" + getRef + "]").eq(eq).attr("rel");
-                              var getTitle = $("*[rel=" + getRef + "]:eq(" + eq + ")").attr("title");
-                              var getCaption = $("*[rel=" + getRef + "]:eq(" + eq + ")").attr("data-cap");
-
-                              console.log("getlen:" + getCaption + " gt: " + getRef + " gi: " + eq);
-
-                              $("#lightbox #slider-img").css("opacity", "0");
-                              setImage(getImg, getTitle, getCaption);
-                          }
-                      });
-
-                      $(document).on("click", ".close", function (event) {
-                          $("#lightbox").fadeOut(250, function () {
-                              $("#lightbox #slider-img").css("opacity", "0");
-                          });
-                      });
-                  });
+             $(window).load(function () {
+                 function animITR() {
+                     elems = ["#block3", "#block5", "#block6"];
+                     times = [4000, 2000, 3000];
+                     for (var a = 0; a < elems.length; a++) {
+                         $(elems[a]).css("left", ($(elems[a]).offset().left + $(elems[a]).width()) * -1 + "px");
+                         $(elems[a]).animate({
+                             left: 0
+                         }, {
+                             duration: times[a], easing: "swing"
+                         });
+                     }
+                 }
+                 animITR();
+                 function animITL() {
+                     elems = ["#block1", "#block2", "#block4"];
+                     times = [4000, 2000, 3000];
+                     for (var a = 0; a < elems.length; a++) {
+                         $(elems[a]).css("left", ($(elems[a]).offset().left + $(elems[a]).width()) + "px");
+                         $(elems[a]).animate({
+                             left: 0
+                         }, {
+                             duration: times[a], easing: "swing"
+                         });
+                     }
+                 }
+                 animITL();
+             });
+         });
       </script>            
    </body>
 </html>
